@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <h1>Calculator</h1>
+    <style>
+        body{
+            text-align:center;
+            background-color:rgb(19, 1, 1);
+            border:solid white 3px;
+            box-shadow: 3px 3px 3px 3px white;
+            border-top-left-radius: 50px;
+            margin:70px 590px 50px 590px;
+        }
+        input[type="number"]{
+         border-width: 2px;  
+         border-radius:5px;
+         width:230px;
+         height:40px;
+         padding-bottom:10px;
+         background-color:rgb(202, 243, 195);
+         box-shadow:8px 16px 16px hsl(110, 45%, 69%, 0.25);
+        }
+        table{
+            margin-left:50px;
+            margin-top:10px;
+            padding-bottom:40px;
+        }
+        table tr td{
+            padding:5px 5px 5px 5px;
+            font-size: x-large;
+            font-family:tahoma;
+        }
+        table tr td button{
+            padding:20px;
+            border-radius:30%;
+        }
+    </style>
+</head>
+<body>
+    <div class="Calculator">
+        <input type="number" id="result" readonly>
+        <table>
+            <tr>
+                <td><button onclick="append(7)" style="background-color:rgb(164, 236, 237);color:rgb(11, 1, 1);font-family:tahoma;"><b>7</b></button></td>
+                <td><button onclick="append(8)" style="background-color:rgb(164, 236, 237);color:rgb(11, 1, 1);font-family:tahoma;"><b>8</b></button></td>
+                <td><button onclick="append(9)" style="background-color:rgb(164, 236, 237);color:rgb(11, 1, 1);font-family:tahoma;"><b>9</b></button></td>
+                <div class="btn">
+                <td><button onclick="operation('+')" style="background-color:rgb(101, 103, 104);color:white;">+</button></td>
+                </div>
+            </tr>
+            <tr>
+                <td><button onclick="append(4)" style="background-color:rgb(164, 236, 237);color:rgb(11, 1, 1);"><b>4</b></button></td>
+                <td><button onclick="append(5)" style="background-color:rgb(164, 236, 237);color:rgb(11, 1, 1);"><b>5</b></button></td>
+                <td><button onclick="append(6)" style="background-color:rgb(164, 236, 237);color:rgb(11, 1, 1);"><b>6</b></button></td>
+                <div class="btn">
+                <td><button onclick="operation('-')" style="background-color:rgb(104, 101, 101);color:white;">-</button></td>
+            </div>
+            </tr>
+            <tr>
+                <td><button onclick="append(3)" style="background-color:rgb(164, 236, 237);color:rgb(11, 1, 1);"><b>3</b></button></td>
+                <td><button onclick="append(2)" style="background-color:rgb(164, 236, 237);color:rgb(11, 1, 1);"><b>2</b></button></td>
+                <td><button onclick="append(1)" style="background-color:rgb(164, 236, 237);color:rgb(11, 1, 1);"><b>1</b></button></td>
+                <div class="btn">
+                <td><button onclick="operation('*')" style="background-color:rgb(104, 101, 101);color:white;">*</button></td>
+            </div>
+            </tr>
+            <tr>
+                <td><button onclick="append(0)" style="background-color:rgb(162, 232, 237);color:rgb(18, 0, 0);"><b>0</b></button></td>
+                <td><button onclick="reset('c')" style="background-color:rgba(231, 11, 44, 0.885);;color:rgb(255, 252, 252);"><b>c</b></button></td>
+                <td><button onclick="output('=')" style="background-color:rgba(11, 231, 11, 0.885);color:rgb(255, 249, 249);"><b>=</b></button></td>
+                <div class="btn">
+                <td><button onclick="operation('/')" style="background-color:rgb(104, 101, 101);color:white;">/</button></td>
+                        </div>
+            </tr>
+        </table>
+    </div>
+    <script src="calculator.js"></script>
+</body>
+</html>
